@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+<link rel="stylesheet" href="mobile_net.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<h1 id="hh">OBJECT DETECTION MODEL</h1>
+    <h2 id="hh1"> Upload an Image To Detect</h2>
+	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+	<p><Button id="press"onclick="myFunction()"type="button" class="btn btn-primary"><label for="file" style="cursor: pointer;">Upload Image</label></Button></p>
+	<p><img id="outputimg"/></p>
+
+
+	</form>
+ 	<div id="output" style="font-family:courier;font-size:24px;height=300px"></div>
+
+</body>
+<script>
+function myFunction(){
+    const img = document.getElementById('outputimg');
+    const outp = document.getElementById('output');
+    mobilenet.load().then(model => {
+        model.classify(outputimg).then(predictions => {
+            console.log(predictions);
+            for(var i = 0; i<predictions.length; i++){
+                outp.innerHTML += "<br/>" + predictions[i].className + " : " + predictions[i].probability;
+            }
+        });
+    });
+}
+</script>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('outputimg');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+</html>

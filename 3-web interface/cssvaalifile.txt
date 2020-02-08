@@ -1,0 +1,21 @@
+#hh{
+	background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
+	text-align:center;
+	color: white;
+	font-size: 100px;
+}
+body{
+	background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
+}
+#press{
+	text-align:center;
+	margin-left: 750px;
+	margin-top: 220px;
+
+
+}
+#hh1{
+	text-align:center;
+	color: white;
+	font-size: 50px;
+}
