@@ -1,7 +1,4 @@
-# sih2020
-Only for sharing purpose for SIH task
 
-This project is entirely for the MIXORG organization for the purpose of SIH.
 It includes various features for the purpose of vehicle surveillance and parking management in residential, business complexes and toll plazas.
 
 Currently we are sumbitting few of the features. Following are the featuers that we are submitting as of now-
