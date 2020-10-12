@@ -12,4 +12,4 @@ Here is the link for google colaboratory notebook- https://drive.google.com/open
 
 4. Annotation are done using Labelme in which we use polygon annotation whose output is json file and is used in Mask-RCNN technique on which the object segmentation model is actually based on.
 
-
+NOTE - Further, you can extend this work if you wish to by combining this all parts!
